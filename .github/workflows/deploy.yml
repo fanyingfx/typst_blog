@@ -46,7 +46,7 @@ jobs:
       - name: Compile with rheo
         run: |
           rheo --version
-          rheo compile .
+          rheo compile . --html
           test -f build/html/index.html
 
       - name: Upload artifact
