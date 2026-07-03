@@ -12,8 +12,5 @@
 #link(<error_handling>)[错误处理]
 
 #link(<reading>)[推荐阅读]
-// To show content only in HTML, we can use Typst's `target` function:
-#context if target() == "html" [
-#link(<about>)[About] 
-]
+
 
