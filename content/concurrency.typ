@@ -5,6 +5,7 @@
 #link("https://yoric.github.io/post/quite-a-few-words-about-async/
 ")[关于异步的总结
 ]
+#link("https://devblogs.microsoft.com/dotnet/how-async-await-really-works/")[C#的async原理]
 = 结构化并发
 #link("https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/")[njs关于结构化并发]
 
