@@ -1,9 +1,11 @@
+= 并发
+#link("https://causality.blog/")[The Concurrency Problem]
 = 异步
 #link("https://yoric.github.io/post/quite-a-few-words-about-async/
 ")[关于异步的总结
 ]
 = 结构化并发
-#link("https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/")[经典的njs关于结构化并发的文章]
+#link("https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/")[njs关于结构化并发]
 
 = 取消
 #link("https://mazzo.li/posts/stopping-linux-threads.html")[如何取消linux线程]
@@ -17,3 +19,4 @@ Andrew Kelley关于取消的演讲 TBA
 
 = 内存模型
 #link("https://research.swtch.com/mm")[Russ Cox关于内存模型的文章]
+

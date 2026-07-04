@@ -11,6 +11,8 @@
 
 #link(<error_handling>)[错误处理]
 
+#link(<testing>)[关于测试]
+
 #link(<reading>)[推荐阅读]
 
 
