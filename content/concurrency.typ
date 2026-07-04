@@ -1,5 +1,6 @@
 = 并发
 #link("https://causality.blog/")[The Concurrency Problem]
+
 = 异步
 #link("https://yoric.github.io/post/quite-a-few-words-about-async/
 ")[关于异步的总结

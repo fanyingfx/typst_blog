@@ -13,6 +13,8 @@
 
 #link(<testing>)[关于测试]
 
+#link(<memory>)[内存管理]
+
 #link(<reading>)[推荐阅读]
 
 
