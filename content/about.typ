@@ -2,9 +2,6 @@
 
 #show: template.with(current-page: "about")
 
-#context if target() == "html" [
-- #link("./index.typ")[Home] 
-]
 
 = About 
 
