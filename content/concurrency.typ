@@ -1,6 +1,3 @@
-= 并发
-#link("https://causality.blog/")[The Concurrency Problem]
-
 = 异步
 #link("https://yoric.github.io/post/quite-a-few-words-about-async/
 ")[关于异步的总结
@@ -22,3 +19,5 @@ Andrew Kelley关于取消的演讲 TBA
 = 内存模型
 #link("https://research.swtch.com/mm")[Russ Cox关于内存模型的文章]
 
+= 并发
+#link("https://causality.blog/")[The Concurrency Problem]
