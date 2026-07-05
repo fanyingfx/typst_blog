@@ -5,4 +5,4 @@
 
 = About 
 
-This project was built with #link("https://rheo.ohrg.org/")[Rheo]. 
+This blog was built with #link("https://rheo.ohrg.org/")[Rheo]. 
