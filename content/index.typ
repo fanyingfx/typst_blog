@@ -5,16 +5,16 @@
 
 #show: template.with(current-page: "index")
 
-#link(<how_to_learn_programming>)[如何学编程]
+=== #link(<how_to_learn_programming>)[如何学编程]
 
-#link(<concurrency>)[关于并发]
+=== #link(<concurrency>)[关于并发]
 
-#link(<error_handling>)[错误处理]
+=== #link(<error_handling>)[错误处理]
 
-#link(<testing>)[关于测试]
+=== #link(<testing>)[关于测试]
 
-#link(<memory>)[内存管理]
+=== #link(<memory>)[内存管理]
 
-#link(<reading>)[推荐阅读]
+=== #link(<reading>)[推荐阅读]
 
 
