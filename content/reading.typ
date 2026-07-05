@@ -7,7 +7,6 @@
 
 #link("https://www.tedinski.com/book/")[Matklad推荐的软件设计系列文章]
 
-#link("https://www.gingerbill.org/series/memory-allocation-strategies/")[Odin语言作者写的关于内存分配的文章]
 
 
 = 书籍
