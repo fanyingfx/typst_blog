@@ -23,3 +23,5 @@
 #link("https://beej.us/guide/bgnet/")[Beej Network]
 
 #link("https://dcic-world.org/2024-09-03/index.html")[A Data-Centric Introduction to Computing]
+
+#link("https://cpu.land/")[Putting the “You” in CPU]
