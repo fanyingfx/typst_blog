@@ -4,39 +4,50 @@
 
   // 当前页面文件名
   const currentFile = location.pathname.split('/').pop();
-
-  // 三个导航项：名称 -> 链接
-  const items = [
-    { name: '首页', href: 'index.html' },
-    { name: '友链', href: 'friends.html' },
-    { name: '关于', href: 'about.html' },
-  ];
+  const isHome = currentFile === '' || /^index\.html?$/i.test(currentFile);
 
   // 构建导航容器
   const nav = document.createElement('nav');
-  nav.className = 'topnav';
+  nav.className = isHome ? 'topnav' : 'breadcrumb';
   Object.assign(nav.style, {
     display: 'flex',
-    gap: '1.5em',
-    padding: '0 0 1em 0',
-    marginBottom: '1.5em',
-    borderBottom: '1px solid #e6e6e6',
-    fontSize: '1em',
+    alignItems: 'center',
+    gap: '0.4em',
+    padding: '1em 0 0 0',
+    marginTop: '2em',
+    borderTop: '1px solid #e6e6e6',
+    fontSize: '0.9em',
+    color: '#606060',
   });
 
-  items.forEach((item) => {
-    const isCurrent = item.href === currentFile;
-    const el = document.createElement(isCurrent ? 'span' : 'a');
-    el.textContent = item.name;
-    if (!isCurrent) el.href = item.href;
-    Object.assign(el.style, {
-      textDecoration: 'none',
-      color: isCurrent ? '#1a1a1a' : '#606060',
-      fontWeight: isCurrent ? 'bold' : 'normal',
-      cursor: isCurrent ? 'default' : 'pointer',
-    });
-    nav.appendChild(el);
-  });
+  function link(href, name) {
+    const a = document.createElement('a');
+    a.href = href;
+    a.textContent = name;
+    Object.assign(a.style, { textDecoration: 'none' });
+    return a;
+  }
 
-  body.insertBefore(nav, body.firstChild);
+  function text(t) {
+    const s = document.createElement('span');
+    s.textContent = t;
+    return s;
+  }
+
+  if (isHome) {
+    // 首页：只显示「友链」「关于」导航
+    nav.style.gap = '1.5em';
+    nav.appendChild(link('friends.html', '友链'));
+    nav.appendChild(link('about.html', '关于'));
+  } else {
+    // 文章页：显示「首页 / 文章标题」面包屑
+    nav.appendChild(link('index.html', '首页'));
+    nav.appendChild(text('/'));
+    const current = document.createElement('span');
+    current.textContent = document.title || '';
+    current.style.color = '#1a1a1a';
+    nav.appendChild(current);
+  }
+
+  body.appendChild(nav);
 })();
