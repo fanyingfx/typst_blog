@@ -8,7 +8,6 @@
 #link("https://www.tedinski.com/book/")[Matklad推荐的软件设计系列文章]
 
 
-
 = 书籍
 
 #link("https://plai.org")[Programming Languages: Application and Interpretation]
