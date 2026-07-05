@@ -4,6 +4,9 @@ content_dir = "content"
 [html.spine]
 vertebrae = ["*.typ"]
 
+[html]
+feed_base_url = "https://fanyingfx.github.io"
+
 [pdf.spine]
 title = "rheo_project"
 vertebrae = ["index.typ"]
