@@ -9,8 +9,6 @@
 
 #link("https://www.gingerbill.org/series/memory-allocation-strategies/")[Odin语言作者写的关于内存分配的文章]
 
-#link("https://github.com/MattPD/cpplinks/tree/master")[各种底层相关资源整合]
-
 
 = 书籍
 

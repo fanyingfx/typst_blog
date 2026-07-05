@@ -34,11 +34,17 @@ jobs:
       - name: Download rheo
         if: steps.cache-rheo.outputs.cache-hit != 'true'
         run: |
+          set -euo pipefail
           mkdir -p .rheo-binary
-          curl -sL "https://github.com/freecomputinglab/rheo/releases/download/${RHEO_VERSION}/rheo-x86_64-unknown-linux-gnu.zip" -o /tmp/rheo.zip
+          # -f: HTTP 错误时返回非零（否则 GitHub 的 HTML 错误页会被当成 zip，unzip 才报错）
+          # --retry: 自动重试瞬时网络/5xx 失败
+          curl -fsSL --retry 5 --retry-delay 3 --retry-all-errors \
+            "https://github.com/freecomputinglab/rheo/releases/download/${RHEO_VERSION}/rheo-x86_64-unknown-linux-gnu.zip" \
+            -o /tmp/rheo.zip
           unzip -o /tmp/rheo.zip -d .rheo-binary
           chmod +x .rheo-binary/rheo
-          rm /tmp/rheo.zip
+          test -x .rheo-binary/rheo
+          rm -f /tmp/rheo.zip
 
       - name: Add rheo to PATH
         run: echo "$PWD/.rheo-binary" >> "$GITHUB_PATH"
@@ -59,8 +65,15 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      # deploy-pages 调 GitHub API 偶发 5xx，自动重试一次
+      url: ${{ steps.deploy1.outcome == 'success' && steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - name: Deploy to GitHub Pages (attempt 1)
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Deploy to GitHub Pages (attempt 2)
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
         uses: actions/deploy-pages@v4
