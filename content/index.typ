@@ -14,7 +14,7 @@
 
 === #link(<memory>)[内存管理]
 
-=== #link(<functinal_programming>)[函数式编程]
+=== #link(<functional_programming>)[函数式编程]
 
 === #link(<reading>)[推荐阅读]
 
