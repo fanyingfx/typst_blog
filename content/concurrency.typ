@@ -1,3 +1,5 @@
+#let rheo-feed-title = "concurrency"
+
 = 异步
 #link("https://yoric.github.io/post/quite-a-few-words-about-async/")[关于异步的总结]
 

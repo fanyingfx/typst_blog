@@ -4,7 +4,6 @@
 }
 
 #show: template.with(current-page: "index")
-
 === #link(<how_to_learn_programming>)[如何学编程]
 
 === #link(<concurrency>)[关于并发]

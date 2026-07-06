@@ -2,10 +2,10 @@ version = "0.4.0"
 content_dir = "content"
 
 [html.spine]
-vertebrae = ["*.typ"]
+vertebrae = ["**/*.typ"]
 
 [html]
-feed_base_url = "https://fanyingfx.github.io"
+feed_base_url = "https://fanyingfx.github.io/blog"
 
 [pdf.spine]
 title = "rheo_project"

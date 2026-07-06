@@ -1,3 +1,3 @@
- #link("https://kzs.moe")[kzs.moe]
+ #link("https://kzs.moe")[Distant Vicinity]
 
  
