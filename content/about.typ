@@ -1,7 +1,3 @@
-#import "index.typ": template
-
-#show: template.with(current-page: "about")
-
 
 = About 
 

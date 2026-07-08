@@ -1,10 +1,11 @@
-#let template(current-page: none, doc) = {
-
-  doc
+#let template(current-page: none, index_class: none, doc) = {
+  html.elem("body", attrs: (class: index_class), doc)
 }
 
-#show: template.with(current-page: "index")
+#show: template.with(current-page: "index", index_class: "index")
 === #link(<how_to_learn_programming>)[如何学编程]
+
+=== #link(<basics>)[一些概念]
 
 === #link(<concurrency>)[关于并发]
 
