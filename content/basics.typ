@@ -13,3 +13,7 @@
 
 == #link(<testing>)[测试]
 
+== 指针
+#link("https://www.ralfj.de/blog/2018/07/24/pointers-and-bytes.html")[关于pointer provenance的三篇文章，这是part1]
+
+
