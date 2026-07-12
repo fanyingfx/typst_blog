@@ -7,3 +7,5 @@
 #link("https://alperenkeles.com/posts/what-is-a-property/")[什么是属性]
 
 #link("https://matklad.github.io/2023/10/06/what-is-an-invariant.html")[什么是不变量]
+
+#link("https://fsharpforfunandprofit.com/posts/property-based-testing-2/")[如何选择属性]
